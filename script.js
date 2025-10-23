@@ -108,7 +108,6 @@ function loadImageGallery() {
         { filename: 'family1.jpg', title: 'Family Photo', description: 'Family gathering at a special occasion', category: 'Family' },
         { filename: 'chloe1.jpg', title: 'Chloe the Dog', description: 'My amazing dog Chloe relaxing at home', category: 'Pets' },
         { filename: 'fish1.jpg', title: 'Fish Tank', description: 'My fish that I care for', category: 'Pets' },
-        { filename: 'school1.jpg', title: 'Saint Kentigern College', description: 'The school I go to', category: 'School' },
         { filename: 'sushi1.png', title: 'Sushi', description: 'My favourite food', category: 'Food' },
         { filename: '../projects/term1-website.jpg', title: 'Recipe Recreation', description: 'My first HTML/CSS portfolio website', category: 'Projects' },
         { filename: '../projects/term2-arduino.jpg', title: 'Arduino GPT Machine', description: 'My Fact-O-Matic Arduino Project', category: 'Projects' },
