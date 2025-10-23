@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Hawken - Digital Technology Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-comb-container">
+            <!-- Red combs only -->
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+            <div class="loading-comb loading-comb-red"></div>
+        </div>
+        <div class="loading-content">
+            <div class="loading-logo">Alex Hawken</div>
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <div class="loading-text">Loading Portfolio</div>
+        </div>
+    </div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay" id="pageTransition">
+        <!-- White combs (faster) -->
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <div class="transition-comb transition-comb-white"></div>
+        <!-- Red combs (delayed) -->
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+        <div class="transition-comb transition-comb-red"></div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="top-navbar">
+        <div class="navbar-content">
+            <a class="navbar-logo" onclick="showPage('home'); return false;">Alex Hawken</a>
+            <ul class="navbar-menu">
+                <li><a onclick="showPage('home'); return false;" class="nav-link active" data-page="home">Home</a></li>
+                <li><a onclick="showPage('gallery'); return false;" class="nav-link" data-page="gallery">Photo Library</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Timeline Navigation -->
+    <nav class="timeline-nav show" id="timelineNav">
+        <div class="timeline-nav-container">
+            <div class="timeline-nav-line"></div>
+            <a onclick="scrollToSection('hero'); return false;" class="timeline-nav-item active" data-section="hero">
+                <div class="timeline-nav-dot"></div>
+                <span>Home</span>
+            </a>
+            <a onclick="scrollToSection('about'); return false;" class="timeline-nav-item" data-section="about">
+                <div class="timeline-nav-dot"></div>
+                <span>About</span>
+            </a>
+            <a onclick="scrollToSection('term1'); return false;" class="timeline-nav-item" data-section="term1">
+                <div class="timeline-nav-dot"></div>
+                <span>Term 1</span>
+            </a>
+            <a onclick="scrollToSection('term2'); return false;" class="timeline-nav-item" data-section="term2">
+                <div class="timeline-nav-dot"></div>
+                <span>Term 2</span>
+            </a>
+            <a onclick="scrollToSection('term3'); return false;" class="timeline-nav-item" data-section="term3">
+                <div class="timeline-nav-dot"></div>
+                <span>Term 3</span>
+            </a>
+            <a onclick="scrollToSection('term4'); return false;" class="timeline-nav-item" data-section="term4">
+                <div class="timeline-nav-dot"></div>
+                <span>Term 4</span>
+            </a>
+            <a onclick="scrollToSection('evaluation'); return false;" class="timeline-nav-item" data-section="evaluation">
+                <div class="timeline-nav-dot"></div>
+                <span>Evaluation</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page active">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Not Meant for Ordinary</h1>
+                <p>In the realm of digital technology, innovation and creativity are paramount.<br>
+                Explore my journey through Year 10 Digital Technology.</p>
+                <button class="hero-button" onclick="scrollToSection('about')">Explore My Work</button>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="full-section about-full">
+            <div class="section-container">
+                <div class="section-badge">About Me</div>
+                <h2>Alex Hawken</h2>
+                <p class="section-subtitle">Year 10 Digital Technology Student</p>
+                <div class="about-content-grid">
+                    <div class="profile-image-large"></div>
+                    <div class="about-text">
+                        <p>Hi! I'm Alex, a 14-year-old student currently at Saint Kentigern College. I'm passionate about coding and the occasional game.</p>
+                        <p>This year has been an incredible journey of learning and creation. From building my first website to programming Arduino devices and creating 3D animations, each project has widened my range of skills.</p>
+                        <p>Beyond technology, I have 2 older brothers and an amazing dog named Chloe. I also care for fish and play the bagpipes!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Term 1 Section -->
+        <section id="term1" class="full-section project-section">
+            <div class="section-container">
+                <div class="section-badge">Term 1</div>
+                <h2>Website Portfolio</h2>
+                <p class="section-subtitle">Simple HTML/CSS portfolio website</p>
+                
+                <div class="project-section-layout">
+                    <div class="project-content">
+                        <h3>Project Overview</h3>
+                        <p>My challenge was to build out a recipe page and get it looking as close to the design as possible. Then I had to redesign the page in my own style, modify layout and colors, and improve accessibility of the page. Lastly I attached my portfolio to this site.</p>
+                        
+                        <h3>Technologies Used</h3>
+                        <p>• HTML for the base of the website.<br>
+                        • CSS for styling and layout.<br>
+                        
+                        <h3>Key Learning Outcomes</h3>
+                        <p>• Understanding of the basics of web development.<br>
+                        • How to use HTML.<br>
+                        • CSS styling and layout techniques.<br>
+                        • How to apply user feedback.</p>
+                        
+                        <h3>Evaluation</h3>
+                        <p>This project gave me a solid foundation in web technology, teaching me how to use basic HTML and CSS to make a simple website. Getting a second opinion taught me to be open-minded to other design choices and to allowed me to make the best website possible. It was also a fun challenge, having to accurately recreate the website given.</p>
+                    </div>
+                    
+                    <div class="project-media">
+                        <img src="images/projects/term1-website.jpg" alt="Term 1 Website Project" class="project-image" 
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRlcm0gMSBQcm9qZWN0PC90ZXh0Pjwvc3ZnPg=='; this.onerror=null;">
+                            <video controls preload="metadata" class="project-video">
+                            <source src="videos/portfolio1/website-portfolio.mp4" type="video/quicktime">
+                            <source src="videos/portfolio1/website-portfolio.mp4" type="video/mp4">
+                            <p>Your browser does not support the video tag.</p>
+                        </video>
+                            </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Term 2 Section -->
+        <section id="term2" class="full-section project-section dark">
+            <div class="section-container">
+                <div class="section-badge">Term 2</div>
+                <h2>Arduino GPT Fact Machine</h2>
+                <p class="section-subtitle">Create a unique, functional Arduino Project.</p>
+                
+                <div class="project-section-layout">
+                    <div class="project-content">
+                        <h3>Project Overview</h3>
+                        <p>An interactive Arduino project that combines ChatGPT with a LCD display to create an engaging fact-sharing device.</p>
+                        
+                        <h3>Technologies Used</h3>
+                        <p>• Arduino Uno WIFI<br>
+                        • LCD Display<br>
+                        • 10k Potentiometer<br>
+                        • 220 ohm Resistors<br>
+                        • Green LED<br>
+                        • Button<br>
+                        • Breadboard & Jumper Wires</p>
+                        
+                        <h3>Key Features</h3>
+                        <p>• Random fact generation and display<br>
+                        • Interactive button controls<br>
+                        • User-friendly interface<br>
+                        • Easy to set-up</p>
+                        
+                        <h3>Evaluation</h3>
+                        <p>Overall, I found this project very interesting and complicated, this was expected since I was doing an AI intergrated project. However, this was made more challenging as I didn’t expect the Arduino libraries I used to be broken. Once my project was done, I found it harder to spot issues, which was why my button broke further into my project rather than earlier. If I were to do it again, I wish I used a bigger screen and another AI model, I found out that ChatGPT isn’t that smart in these situations so it’s better to use a web search based model or something similar. Lastly, I had a lot of fun while building project, I enjoyed being able to make my own project and found the challenges throughout interesting and fun.</p>
+                    </div>
+                    
+                    <div class="project-media">
+                         <img src="images/projects/term2-arduino.jpg" alt="Term 2 Arduino Project" class="project-image" 
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRlcm0gMSBQcm9qZWN0PC90ZXh0Pjwvc3ZnPg=='; this.onerror=null;">
+
+                        <video controls preload="metadata" class="project-video">
+                            <source src="videos/arduino/arduino-demo.mov" type="video/quicktime">
+                            <source src="videos/arduino/arduino-demo.mp4" type="video/mp4">
+                            <p>Your browser does not support the video tag.</p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Term 3 Section -->
+        <section id="term3" class="full-section project-section">
+            <div class="section-container">
+                <div class="section-badge">Term 3</div>
+                <h2>3D Printed Model</h2>
+                <p class="section-subtitle">3D modeling & 3D printing project</p>
+                
+                <div class="project-section-layout">
+                    <div class="project-content">
+                        <h3>Project Overview</h3>
+                        <p>A creative 3D project involving creating a cat shaped cover for a mouse.</p>
+                        
+                        <h3>Technologies Used</h3>
+                        <p>• Blender 3D software<br>
+                        • Boolean Function<br>
+                        • Seperation Technique<br>
+                        • Merge Function</p>
+                        
+                        <h3>Creative Process</h3>
+                        <p>• Cat design and modeling<br>
+                        • 3D Printing Exporting<br>
+                        • Trial & Testing<br>
+                        • Addressing Issues<br>
+                        • Final output</p>
+                        
+                        <h3>Evaluation</h3>
+                        <p>Overall, my work that I’ve achieved so far has made progress and is almost at completion. I combined my mouse and cat model to create a mouse cat, which in my first trial had a couple issues. The hardest issue was probably creating the ears, as these had to fit inside the ear cutouts and be long enough to reach the mouse. In my first attempt to print my model I learnt that there were no supports, causing my model to ‘spaghettify’ when printing, luckily this was realised quickly and was reprinted. Once printed, In my first trial the ears couldn’t reach the mouses buttons and the left ear couldn’t fit inside the holes, which taught me a lot for my next version. Which, I lengthened the ears, and made smaller, which fixed the main issue with my cat mouse not functioning. I then printed just the ears; however, I had the same issue with my left ear, not fitting. The good news however, I made progress as the right ear could now click the mouses buttons. Sadly, another issue become more predominant, which was the mouse couldn’t fit inside the cat. After I got feedback my latest model came into place, I used what I had learnt to create more space inside the cat, while shrinking the cat's footprint (space taken up). I also edited the ears to properly fit, leaving me with the version I have today. <br><br> If I had more time, I would print my new version and test it, and if any more issues would arise (i.e. ears not reaching the buttons, ears come out of the hole, etc.), I would fix those. I would also add a scroll wheel, however with the time and knowledge restraints I had I wasn’t able to implement this.</p>
+                    </div>
+                    
+                    <div class="project-media">
+                          <img src="images/projects/term3-blender-1.jpg" alt="Term 3 Blender Project" class="project-image" 
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRlcm0gMSBQcm9qZWN0PC90ZXh0Pjwvc3ZnPg=='; this.onerror=null;">
+  <img src="images/projects/term3-blender-2.jpg" alt="Term 3 Blender Project" class="project-image" 
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRlcm0gMSBQcm9qZWN0PC90ZXh0Pjwvc3ZnPg=='; this.onerror=null;">
+  <img src="images/projects/term3-blender-3.jpg" alt="Term 3 Blender Project" class="project-image" 
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRlcm0gMSBQcm9qZWN0PC90ZXh0Pjwvc3ZnPg=='; this.onerror=null;">
+  
+                             <video controls preload="metadata" class="project-video">
+                            <source src="videos/blender/blender-portfolio.mp4" type="video/quicktime">
+                            <source src="videos/blender/blender-portfolio.mp4" type="video/mp4">
+                            <p>Your browser does not support the video tag.</p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Term 4 Section -->
+        <section id="term4" class="full-section project-section dark">
+            <div class="section-container">
+                <div class="section-badge">Term 4</div>
+                <h2>Final End Of Year Portfolio</h2>
+                <p class="section-subtitle">Webpage Version 2</p>
+                
+                <div class="project-section-layout">
+                    <div class="project-content">
+                         <h3>Project Overview</h3>
+                        <p>To create a personal digital presence that represents who I am, my skills, and the projects I've worked on in digital technology this year.</p>
+                       
+                         <h3>Technologies Used</h3>
+                        <p>• Claude AI<br>
+                        • Visual Studio Code</p>
+
+                        <h3>Process of Development</h3>
+                        <p>Claude AI was used to make the majority of my End Of Year portfolio page. After multiple itterations I ended up with the website you're currently on.
+                            <br><br>
+                            My first website itteration involved a similarly styled base, however it was a lot more clunky, where each different project took up a seperate page, removing the sense of progression and the time-scale. My second version pivoted in the opposite direction, where as you completed a maze, more aspects of this portfolio was unlocked, however this didn't work as after some feedback and consideration, portfolios are designed to show off your work, not lock it behind levels. This is where I ended up with this website design, getting inspiration from websites such as <a href="https://www.whittakers.co.nz/en_WW/our-story">Whittaker's</a> where they create a unique, animated timeline page, which was something I wanted my site to be similar to.
+                            <br><br>
+                            Once I had reached my final design the most challenging part was adding additional features, as Claude would give incorrect responses, bugs, etc. This became even more challenging once my token limit would run out, limiting the amount of progress I could make each day. To combat this I had to edit parts of the code in Visual Studio, for example there was one bug where Claude left unformatted, random html code at the bottom of the webpage, requiring me to manually delete it.
+                            <br><br>
+                            You can see some previous design choices, and issues I encoutered to the side.
+                        </p>
+                        
+                        <h3>Main Issues/Bugs</h3>
+                        <p>• Creating the loading screen was rather difficult, as the certain style I wanted was hard to describe to Claude, meaning I had to go through multiple alterations until I reached the current design.<br>
+                        • Making the transition between each page, as Claude didn't add a debounce, making it easily breakable. It also took a while to find a design I liked.<br>
+                        • Customising the timeline bar on the side, as it would take multiple attempts to get this working as planned.<br>
+                        </p>
+                        
+                        <h3>The Final Evaluation for this project can be found below.</h3>
+                    </div>
+                    
+                    <div class="project-media">
+                        <img src="images/projects/term4-websiteport2-1.png" alt="Term 4 Project" class="project-image"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRlcm0gNCBQcm9qZWN0PC90ZXh0Pjwvc3ZnPg=='; this.onerror=null;">
+<img src="images/projects/term4-websiteport2-2.png" alt="Term 4 Project" class="project-image"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRlcm0gNCBQcm9qZWN0PC90ZXh0Pjwvc3ZnPg=='; this.onerror=null;">
+<img src="images/projects/term4-websiteport2-3.png" alt="Term 4 Project" class="project-image"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRlcm0gNCBQcm9qZWN0PC90ZXh0Pjwvc3ZnPg=='; this.onerror=null;">
+
+                            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evaluation Section -->
+        <section id="evaluation" class="full-section evaluation-full">
+            <div class="section-container">
+                <div class="section-badge">Final Evaluation</div>
+                <h2>Learning Evaluation</h2>
+                <p class="section-subtitle">Reflecting on my digital technology journey</p>
+                
+                <div class="evaluation-content">
+                    <h3>Final Portfolio Evaluation</h3>
+                    <p>Overall, I found this to be quite an enjoying task, although not as challenging as previous assessments this webpage allowed me to make a professional looking portfolio, and I believe my outcome reflects that. The tools I used (Claude AI) allowed me to create my vision for the perfect portfolio page. Reflecting back onto the steps that brought me here, I feel I should've managed my time better, as once I was out of Claude AI tokens my progress grinded to a halt. If I were to do it again I would've liked to seen more animations and gradients being incorporated, however the limit on AI tokens and the timeframe prevented this. I would've also liked to see some way I could've incorperated my maze type portfolio into my final version, without compromising on information shared.</p>
+                    
+                    <h3>Final Synthesis</h3>
+                    <p>
+                        I've found this year to be quite enjoying overall. Each topic has widened my knowledge and has been challenging, yet educating. My personal favourite would be my ChatGPT Arduino project, as I found it quite challenging (yet fun!) to overcome each obstacle thrown at me, whether the broken libaries, or the incorrect Arduino module, each obstacle was unforeseen and satisfactory to overcome. The one project I wanted to re-do was my portfolio page, I personally disliked the design, and the functionality of my original portfolio, so I'm glad I got to remake it into this. 
+                    </p>
+                    
+                    </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="galleryPage" class="page gallery-page">
+        <div class="gallery-hero">
+            <div class="gallery-hero-content">
+                <div class="section-badge">Gallery</div>
+                <h2>Photo Library</h2>
+                <p class="section-subtitle">A collection of photos and memories from my Digital Technology journey and more!</p>
+            </div>
+        </div>
+        
+        <div class="gallery-content">
+            <div class="image-grid" id="imageGrid"></div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">‹</div>
+        <div class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">›</div>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
